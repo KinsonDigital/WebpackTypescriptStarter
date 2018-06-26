@@ -9,7 +9,7 @@
 		"build-prod": "webpack --config webpack/webpack.prod.js",
 		"rebuild-dev": "npm run clean & npm run build-dev",
 		"publish": "npm run clean & npm run build-prod",
-		"serve": "webpack-dev-server --config webpack/webpack.dev.js --output-public-path=/build/",
+		"serve": "npm run build-dev && webpack-dev-server --config webpack/webpack.dev.js --output-public-path=/build/",
 		"start": "cls & npm run rebuild-dev && npm run serve"
 	},
 	"keywords": [],
