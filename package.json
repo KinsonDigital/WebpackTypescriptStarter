@@ -4,13 +4,11 @@
 	"description": "",
 	"private": true,
 	"scripts": {
-		"clean": "cls & del /q /s /f build",
 		"build-dev": "cls & webpack --config webpack/webpack.dev.js",
 		"build-prod": "cls & webpack --config webpack/webpack.prod.js",
-		"rebuild-dev": "npm run clean & npm run build-dev",
-		"publish": "npm run clean & npm run build-prod",
-		"start-webpack-dev-server": "cls & webpack-dev-server --config webpack/webpack.dev.js --output-public-path=/build/",
-		"start": "cls & npm run rebuild-dev && npm run start-webpack-dev-server"
+		"publish": "npm run build-prod",
+		"start-dev": "cls & webpack-dev-server --config webpack/webpack.dev.js --output-public-path=/build/",
+		"start-prod": "cls & webpack-dev-server --config webpack/webpack.prod.js --output-public-path=/build/"
 	},
 	"keywords": [],
 	"author": "",
